@@ -22,3 +22,11 @@ func Index(c echo.Context) error {
 
 	return c.JSON(http.StatusOK, handlers.Success(payload))
 }
+func Indiago(c echo.Context) error {
+	payload := map[string]string{
+		"message": "ok my bad ",
+		"version": config.Env.Version,
+	}
+
+	return c.JSON(http.StatusOK, handlers.Success(payload))
+}
